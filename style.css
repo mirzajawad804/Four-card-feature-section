@@ -246,3 +246,44 @@ background-color: #ffffff;
     position: relative;
     top: -200px;
 }
+/* Responsive tweaks: only apply on smaller viewports so desktop layout stays the same */
+@media (max-width: 900px) {
+    .container1{ top: 20px; padding: 0 16px; }
+    .container2, .container3, .container4, .container5,
+    .bg1, .bg2, .bg3, .bg4{
+        position: static !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+        width: calc(100% - 32px);
+        max-width: 520px;
+        margin: 18px auto;
+        box-shadow: 2px 2px 6px #d6d6d6;
+        display: block;
+    }
+    .container2, .container3, .container4, .container5{
+        height: auto;
+        padding: 18px 16px 28px 16px;
+    }
+    .bg1, .bg2, .bg3, .bg4{ height: 12px; border-radius: 6px; }
+    .img1, .img2, .img3, .img4{
+        position: static !important;
+        display: block;
+        margin: 8px auto 12px auto;
+        left: auto !important;
+        top: auto !important;
+    }
+    .item1, .part1, .sec1, .sect1{ left: 0 !important; top: 0 !important; margin-top: 6px; }
+    .item2, .part2, .sec2, .sect2{ left: 0 !important; top: 0 !important; margin-top: 8px; }
+    .box1{ font-size: 16px; }
+    .box2{ font-size: 20px; }
+    .box3{ font-size: 14px; }
+}
+
+@media (max-width: 480px) {
+    .container2, .container3, .container4, .container5{ max-width: 360px; padding: 14px; }
+    .box2{ font-size: 18px; }
+    .box3, .item2, .part2, .sec2, .sect2{ font-size: 13px; line-height: 18px; }
+    .container1{ top: 8px; }
+}
